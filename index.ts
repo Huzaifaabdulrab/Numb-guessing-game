@@ -2,8 +2,9 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
-const randomNumber = Math.floor(Math.random() * 10 + 1);
-
+let condition = false
+while(!condition){
+const randomNumber = Math.floor(Math.random()  * 10 + 1 );
     const answer = await inquirer.prompt([
         {
             name: "userGuessedNumber",
@@ -14,12 +15,13 @@ const randomNumber = Math.floor(Math.random() * 10 + 1);
     if (answer.userGuessedNumber === randomNumber) {
         console.log(
             chalk.green.bgBlack.bold("Congratulation you guess write number")
-        );
-    }
+        ); condition = true
+    } 
     else {
         console.log(
             chalk.red.underline(
-                `Please (Try Again)`
+                `Please (Try Again) the number is ${randomNumber}`
             )
         );
     }
+}

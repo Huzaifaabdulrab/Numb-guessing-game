@@ -1,6 +1,6 @@
 {
   "name": "h2-r2-numguess-game-proj",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "second number Guessing game project GIAIC",
   "main": "index.js",
   "type": "module",
